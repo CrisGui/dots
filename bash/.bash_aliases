@@ -17,6 +17,9 @@ alias psg="ps aux | rg -v rg | rg -ie VSZ -e"
 alias mount="mount | column -t"
 alias mnt="mount | rg -e ^/dev"
 
+# fd
+alias fd="fd . --full-path"
+
 # trash-cli
 alias del="trash-put"
 
