@@ -1,3 +1,6 @@
-command.txt
-
 \.git
+.gitignore
+LICENSE
+
+neovim/**/lazy-lock.json
+tmux/**/plugins
