@@ -1,0 +1,31 @@
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Cristian Guilarte
+	email = 159936410+CrisGui@users.noreply.github.com
+[color]
+	ui = true
+[alias]
+	s = status --short --branch --show-stash
+	co = checkout
+	c = commit --short
+	#ci = commit --short
+	p = push
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=short --color --decorate
+[core]
+	pager = less
+	editor = nvim
+	autocrlf = input
+	whitespace = trailing-space,-space-before-tab,indent-with-non-tab,cr-at-eol
+
+[interactive]
+	diffFilter = delta --color-only
+[commit]
+	template = /home/cris/.gitmessage
+[help]
+	autocorrect = 1
