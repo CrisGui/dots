@@ -1,0 +1,119 @@
+format="""
+$directory$git_branch$git_commit$git_state$git_metrics$git_status\
+$fill\
+$package$container$docker_context$cmake$meson\
+$fill\
+$bun$c$golang$lua$nodejs$python$rust$ruby
+$sudo$jobs$battery$cmd_duration$status$character
+"""
+add_newline=false
+
+[battery]
+full_symbol='󰁹 '
+charging_symbol='󱟦 '
+discharging_symbol='󱟤 '
+unknown_symbol='󰂑 '
+empty_symbol='󰂎 '
+[[battery.display]]
+threshold = 20
+style = 'bold red'
+[[battery.display]]
+threshold = 40
+style = 'bold yellow'
+
+[bun]
+format='[$symbol($version)]($style) '
+
+[c]
+symbol=' '
+format='[$symbol($version(-$name))]($style) '
+
+[character]
+success_symbol='[λ](bold green)'
+error_symbol='[λ](bold red)'
+
+[cmake]
+format='[$symbol($version)]($style) '
+
+[cmd_duration]
+min_time=1_000
+format='[Δ$duration]($style) '
+show_notifications=true
+notification_timeout=20_000
+
+[directory]
+truncation_length=2
+truncation_symbol='~/.../'
+#fish_style_pwd_dir_length=3
+
+[docker_context]
+format='[$symbol$context]($style) '
+
+[fill]
+symbol=" "
+
+[git_branch]
+always_show_remote=true
+symbol='󰘬 '
+format='[$symbol$branch(:$remote_branch)]($style)'
+
+[git_commit]
+tag_symbol='󰓹 '
+
+[git_metrics]
+disabled=false
+format='[\[](bold bright-purple)([+$added]($added_style))(:[-$deleted]($deleted_style))[\]](bold bright-purple)'
+
+[git_status]
+style='bold purple'
+format='[\[](bold bright-purple)([$all_status$ahead_behind]($style))[\]](bold bright-purple)'
+diverged='[V$count](bold bright-red)'
+conflicted='[C$count](bold purple)'
+untracked='[U$count](dimmed white)'
+stashed='[S$count](dimmed cyan)'
+modified='[M$count](bold blue)'
+#typechanged='[M$count](bold blue)'
+staged='[A$count](bold green)'
+renamed='[R$count](bold yellow)'
+deleted='[D$count](bold red)'
+
+[golang]
+symbol=' '
+format='[$symbol($version)(-$mod_version)]($style) '
+
+[jobs]
+format='[$symbol$number]($style) '
+symbol=' '
+
+[lua]
+format='[$symbol($version)]($style) '
+symbol='󰢱 '
+
+[nodejs]
+format='[$symbol($version)]($style) '
+
+[package]
+format='[$symbol$version]($style) '
+display_private=true
+
+[python]
+format='[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+symbol=' '
+detect_extensions=['py', 'pyc']
+
+[ruby]
+format='[$symbol($version)]($style) '
+symbol=' '
+
+[rust]
+format='[$symbol($version)]($style) '
+symbol='󱘗 '
+
+[status]
+disabled=false
+format='[($common_meaning )($signal_name )$status]($style) '
+
+[sudo]
+disabled=false
+symbol=' '
+format='[$symbol]($style) '
