@@ -1,0 +1,17 @@
+{
+  "create-icon-theme-dest": "/home/cris/Downloads/catppuccin_mocha.zip",
+  "create-icon-theme-folder": "/home/cris/.config/calibre/resources/images/mocha",
+  "import-calibre-palette": "/home/cris/Downloads",
+  "sort_history": [
+    [
+      "timestamp",
+      false
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "welcome_wizard_device": "kindle",
+  "welcome_wizard_was_run": true
+}
