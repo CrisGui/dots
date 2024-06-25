@@ -154,4 +154,4 @@ local opts = {
 		require = true,
 	},
 }
-require("lazy").setup({{import = "plugins"}}, opts)
+require("lazy").setup({{import = "user/plugins"}}, opts)

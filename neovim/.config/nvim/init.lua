@@ -2,11 +2,13 @@ local user = "user"
 
 require(user)
 
+vim.cmd.colorscheme "catppuccin"
+
 if vim.env.VSCODE then
   vim.g.vscode = true
 end
 
--- vim.loader = false
+vim.loader = false
 if vim.loader then
   vim.loader.enable()
 end
