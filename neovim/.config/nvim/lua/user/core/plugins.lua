@@ -124,7 +124,7 @@ local opts = {
 				"gzip",
 				-- "matchit",
 				"matchparen",
-				-- "netrwPlugin",
+				"netrwPlugin",
 				"tarPlugin",
 				"tohtml",
 				"tutor",
@@ -154,4 +154,4 @@ local opts = {
 		require = true,
 	},
 }
-require("lazy").setup({{import = "user/plugins"}}, opts)
+require "lazy" .setup({{import = "user/plugins"}}, opts)
