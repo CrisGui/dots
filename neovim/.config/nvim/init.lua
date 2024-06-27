@@ -1,10 +1,11 @@
+--vim.bo.loadplugins = true
+
 require "user"
+local u = require "user.core.utils"
 
 vim.cmd.colorscheme "catppuccin"
 
-if vim.env.VSCODE then
-  vim.g.vscode = true
-end
+vim.g.vscode = u.is_vscode_running()
 
 --vim.loader = false
 if vim.loader then

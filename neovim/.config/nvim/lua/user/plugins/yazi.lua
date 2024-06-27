@@ -1,5 +1,6 @@
 return {
   "mikavilpas/yazi.nvim",
+  main = "yazi",
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
@@ -8,9 +9,9 @@ return {
     {
       "<leader>fe",
       function()
-        require("yazi").yazi(nil, vim.fn.getcwd())
+        require "yazi".yazi(nil, vim.fn.getcwd())
       end,
-      desc = "[F]ile [E]xplorer" ,
+      desc = "[F]ile [E]xplorer",
     },
   },
   opts = {
