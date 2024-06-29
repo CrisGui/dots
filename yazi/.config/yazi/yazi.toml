@@ -1,0 +1,31 @@
+[manager]
+ratio = [2, 3, 3]
+sort_by = "extension"
+sort_sensitive = true
+sort_dir_first = true
+linemode = "permissions"
+show_hidden = true
+show_symlink = false
+scrolloff = 10
+tab_size = 100
+max_width = 500
+max_height = 500
+image_filter = "nearest"
+image_quality = 50
+sixel_fraction = 20
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true }]
+play = [{ run = 'mpv "$@"', orphan = true, for = "linux" }]
+open = [{ run = 'xdg-open "$@"', desc = "Open" }]
+
+# [input]
+# origin="hovered"
+# [open]
+
+# [tasks]
+# micro_workers = 1000
+# macro_workers = 100
+# bizarre_retry = 50
+# image_alloc = 0
+# image_bound = 0

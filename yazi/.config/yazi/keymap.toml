@@ -1,0 +1,35 @@
+[[input.prepend_keymap]]
+on = ["<Esc>"]
+run = "close"
+desc = "Cancel input"
+
+[[input.prepend_keymap]]
+on = ["s", "c"]
+run = "search -rg"
+desc = "Search by Content"
+
+[[input.prepend_keymap]]
+on = ["s", "n"]
+run = "search -fd"
+desc = "Search by Name"
+
+[[manager.prepend_keymap]]
+on = ["y"]
+run = [
+  "yank",
+  '''
+	shell --confirm 'for path in "$@"; do echo "$path"; done | wl-copy -pt text/uri-list'
+''',
+]
+[confirm]
+keymap = [
+  { on = [
+    "<Esc>",
+  ], run = "close", desc = "Cancel the confirm" },
+  { on = [
+    "n",
+  ], run = "close", desc = "Cancel the confirm" },
+  { on = [
+    "y",
+  ], run = "close --submit", desc = "Submit the confirm" },
+]
