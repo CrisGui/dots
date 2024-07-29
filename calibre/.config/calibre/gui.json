@@ -200,45 +200,45 @@
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
       "height": 742,
-      "width": 1366,
+      "width": 1360,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 742,
-      "width": 1366,
+      "width": 1360,
       "x": 0,
       "y": 0
     },
     "maximized": false,
     "normal_geometry": {
       "height": 742,
-      "width": 1366,
+      "width": 1360,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABVUAAALlAAAAAAAAAAAAAAVVAAAC5QAAAAAAAAAABVYAAAAAAAAAAAAABVUAAALl"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABU8AAALlAAAAAAAAAAAAAAVPAAAC5QAAAAEAAAAABVAAAAAAAAAAAAAABU8AAALl"
     },
     "screen": {
       "depth": 32,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
         "height": 768,
-        "width": 1366,
-        "x": 0,
+        "width": 1360,
+        "x": 1366,
         "y": 0
       },
-      "index_in_screens_list": 0,
-      "manufacturer": "Chi Mei Optoelectronics corp.",
-      "model": "0x15A7",
-      "name": "LVDS-1",
+      "index_in_screens_list": 1,
+      "manufacturer": "DTV",
+      "model": "CHHWJT    ",
+      "name": "HDMI-A-1",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 768,
-        "width": 1366
+        "width": 1360
       },
       "virtual_geometry": {
         "height": 768,
@@ -505,7 +505,7 @@
   },
   "grid view visible": false,
   "library_usage_stats": {
-    "/home/cris/Calibre Library": 7
+    "/home/cris/Calibre Library": 9
   },
   "light_palette_name": "__current__",
   "light_palettes": {
