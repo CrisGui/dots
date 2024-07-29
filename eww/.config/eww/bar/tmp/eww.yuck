@@ -1,0 +1,96 @@
+(defvar eww "$HOME/.local/bin/eww -c $HOME/.config/eww/")
+(defvar power_rev true)
+(defvar time_rev false)
+(defvar clock_rev false)
+(defvar wifi_rev false)
+(defvar bluetooth_rev false)
+
+(defwidget power []
+	(eventbox
+	  :onhover "${eww} update power_rev=true"	
+		:onhoverlost "${eww} update power_rev=false" 
+	  (box	
+	    :orientation "v"					
+			:class "powermenu"
+			:vexpand false
+			:hexpand false
+			:space-envenly false
+	    (revealer	
+	      :transition "slidedown"				
+				:reveal power_rev
+				:duration "300ms"
+	      (box		
+	        :orientation "v"					
+          (button		
+  	        :class "btn-reboot"					
+	  			  :tooltip "Reboot System"		 
+				    :onclick "systemctl reboot"	"R")
+
+	        (button	
+	          :class "btn-logout" 				
+				    :tooltip "Logout" 		 
+				    :onclick "systemctl" "K")
+
+	        (button
+	          :class "btn-lock" 				
+				    :tooltip "Lock Screen"	 
+				    :onclick ""	"")
+
+	        (button
+	          :class "btn-poweroff"					
+				    :tooltip "Shutdown"		 
+				    :onclick "systemctl poweroff"	""))))))
+
+(defwidget start []
+  (box
+    :class "bar-start"
+    :orientation "v"
+    :valign "center"
+    :halign "start"
+    :vexpand false
+    :hexpand false
+  "START"))
+
+(defwidget middle []
+  (box
+    :class "bar-middle"
+    :orientation "v"
+    :valign "center"
+    :halign "center"
+    :vexpand false
+    :hexpand false
+  "MIDDLE"))
+
+(defwidget end []
+  (box
+    :class "bar-end"
+    :orientation "v"
+    :valign "center"
+    :halign "end"
+    :vexpand false
+    :hexpand false
+  (power)))
+
+(defwidget bar []
+  (box
+    :class "bar"
+    :orientation "v"
+    :vexpand false
+    :hexpand false
+  (start)
+  (middle)
+  (end)))
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+    :x "0%"
+    :y "0%"
+    :width "40px"
+    :height "80%"
+    :anchor "center right")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+  :namespace "EwwMainBar"
+  (bar))

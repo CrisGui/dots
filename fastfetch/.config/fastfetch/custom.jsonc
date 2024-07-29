@@ -1,0 +1,104 @@
+{   "logo": {
+    "type":"small",
+    "color": {
+      "1": "light_cyan",
+      "2": "light_cyan"
+    },
+    "padding": {"left": 2, "top": 1, "right": 3}
+  },
+  "general": {
+    "multithreading": true,
+    "playerName": "mpv"
+  },
+  "display": {
+    "stat": true,
+    //"pipe": true,
+    "showErrors": false,
+    "hideCursor": true,
+    "separator": " : ",
+    "brightColor": true,
+    "binaryPrefix": "iec"
+  },
+  "library": {
+    "wayland": "Linux",
+    "gio": "Linux",
+    "dconf": "Linux",
+    "dbus": "Linux",
+    "sqlite3": "Linux",
+    "z": "Linux",
+    "chafa": "Linux",
+    "egl": "Linux",
+    "glx": "Linux",
+    "osmesa": "Linux",
+    "opencl": "Linux",
+    "nm": "Linux",
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "uptime",
+      "format": "{2}H {3}M {4}S"
+    },
+    {
+      "type": "version",
+      "format": "{1} \t\t\tv{2}"
+    },
+    {
+      "type": "wifi",
+      "format": "{1}"
+    },
+    {
+      "type": "battery",
+      "format": "{4} - {5}"
+    },
+    {
+      "type": "host",
+      "format": "{2}"
+    },
+    {
+      "type": "kernel",
+      "format": "{1} \t\t\tv{2}"
+    },
+    {
+      "type": "lm",
+      "format": "{1} \t\t\t\t({2})"
+    },
+    {
+      "type": "os",
+      "format": "{2} \t\t\t{12}"
+    },
+    {
+      "type": "processes",
+      "format": "{1}"
+    },
+    {
+      "type": "terminal",
+      "format": "{5} \t\t\tv{6}"
+    },
+    {
+      "type": "uptime",
+      "format": "{2}H {3}M {4}S"
+    },
+    {
+      "type": "version",
+      "format": "{1} \t\t\tv{2}"
+    },
+    {
+      "type": "wifi",
+      "format": "{1}"
+    },
+    {
+      "type": "wmtheme",
+      "format": "{2}H {3}M {4}S"
+    },
+    {
+      "type": "version",
+      "format": "{1} \t\t\tv{2}"
+    },
+    {
+      "type": "wifi",
+      "format": "{1}"
+    },
+  ],
+}
