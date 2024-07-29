@@ -19,15 +19,16 @@ alias mnt="mount | rg -e ^/dev"
 
 # fd
 alias fd="fd . --full-path"
+alias open_nvim="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs tmux new -s project -n code nvim"
 
 # trash-cli
 alias del="trash-put"
 
 # eza
-alias l="eza -Ga --group-directories-first --sort type --icons --color=always --classify=always"
 alias tree="eza -aTL"
-alias trt="eza -1lXaBhHiUm@T --git-repos --git --time-style '+%Y%m%d%H%M%S' --smart-group --sort type --icons=always --color=always --classify=always -L"
-alias ll="eza -1lXaBhHiUm@ --group-directories-first --git-repos --git --time-style '+%Y%m%d%H%M%S' --smart-group --sort type --icons=always --color=always --classify=always"
+alias l="eza -Ga --group-directories-first --sort type --icons --color=always --classify=always"
+alias ll="eza -1lXabhHiUm@ --group-directories-first --git-repos --git --time-style '+%Y%m%d%H%M%S' --smart-group --sort type --icons=always --color=always --classify=always"
+alias llt="eza -1lXabhHiUm@T --git-repos --git --time-style '+%Y%m%d%H%M%S' --smart-group --sort type --icons=always --color=always --classify=always -L"
 
 # neovim
 alias v="nvim"
