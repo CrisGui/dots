@@ -18,7 +18,7 @@ alias mount="mount | column -t"
 alias mnt="mount | rg -e ^/dev"
 
 # fd
-alias fd="fd . --full-path"
+alias fd="fd . --full-path --no-ignore"
 alias open_nvim="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs tmux new -s project -n code nvim"
 
 # trash-cli
