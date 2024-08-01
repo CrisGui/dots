@@ -27,7 +27,7 @@
 	"requestsplitn": 10,
 	"completionrefreshtime": 14,
 	"maxconcurrentdownloads": 10,
-	"bottomup": false,
+	"bottomup": true,
 	"sudoloop": true,
 	"timeupdate": true,
 	"devel": true,
